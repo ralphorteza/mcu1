@@ -1,2 +1,2 @@
-# mcu1
-mastering microcontrollers
+# MasteringMCU
+Udemy Mastering Microcontroller Course Repository 
