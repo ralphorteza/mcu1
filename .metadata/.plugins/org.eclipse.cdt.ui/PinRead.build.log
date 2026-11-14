@@ -1,0 +1,17 @@
+12:31:23 **** Build of configuration Debug for project PinRead ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32F103RBTx -DSTM32 -DSTM32F1 -DNUCLEO_F103RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PinRead.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/ralphorteza/repos/mcu1/PinRead/STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PinRead.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PinRead.elf
+ 
+arm-none-eabi-size  PinRead.elf 
+arm-none-eabi-objdump -h -S PinRead.elf  > "PinRead.list"
+   text	   data	    bss	    dec	    hex	filename
+    708	      0	   1568	   2276	    8e4	PinRead.elf
+Finished building: default.size.stdout
+ 
+Finished building: PinRead.list
+ 
+
+12:31:23 Build Finished. 0 errors, 0 warnings. (took 133ms)
+
